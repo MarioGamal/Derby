@@ -23,6 +23,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "react-native-share",
+        {
+          "ios": {
+            "isEnabled": true
+          }
+        }
+      ]
+    ]
   }
 }
