@@ -25,6 +25,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
         await signInWithEmailAndPassword(auth, email, password);
         setSnackbarMessage('Login successful!');
         setSnackbarVisible(true);
+        navigation.navigate('Home'); // Redirect to HomeScreen
       } catch (error ) {
         if (error instanceof FirebaseError) {
             setSnackbarMessage(error.message || 'An error occurred. Please try again.');
